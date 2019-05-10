@@ -1,0 +1,7 @@
+{
+  "name": "bmw-data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Leonardo Alves <leoroberto.alves@hotmail.com>",
+  "license": "MIT"
+}
