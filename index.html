@@ -15,7 +15,14 @@
     <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#000000">
 
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/lib/slick.min.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
 
 </head>
 <body>
@@ -30,34 +37,88 @@
             <img id="logo" src="assets/images/bmw-logo.png" alt="bmw group" title="">
             <h1>BEM-VINDO A BMW GROUP</h1>
             <a class="btn" href="#start">INICIAR APRESENTAÇÃO</a>
+            <!-- <a class="btn" href="#inext"><i>iNext</i></a> -->
         </div>
     </header>
 
     <section id="start" class="section">
-        <div class="start-header">
+        <div class="header">
             <h2>A BMW GROUP</h2>
         </div>
         <div class="start-content">
-            <div class="col-50">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat vel repellat asperiores atque temporibus natus ipsam quam. Mollitia assumenda voluptatum quis hic natus consequuntur unde voluptates. Quam exercitationem voluptatibus corporis.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat vel repellat asperiores atque temporibus natus ipsam quam. Mollitia assumenda voluptatum quis hic natus consequuntur unde voluptates. Quam exercitationem voluptatibus corporis.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat vel repellat asperiores atque temporibus natus ipsam quam. Mollitia assumenda voluptatum quis hic natus consequuntur unde voluptates. Quam exercitationem voluptatibus corporis.</p>
-                <span><i>- Haral Kruger, CEO of BMW</i></span>
+            <div class="col-start-content">
+                <p>
+                    Bayerische Motoren Werke AG é uma empresa alemã, fabricante de automóveis e motocicletas, sediada em Munique, Baviera. A Fábrica de Motores da Baviera, tradução em português da sigla BMW, desenvolve experiencia premium em mobilidade.
+                </p>
+                <p>
+                    A BMW GROUP desenvolve, fabrica e comercializa seus produtos sob as marcas Mini, Rolls-Royce Motor Cars e BMW. Todas as marcas são consideradas premium e com muitos fãs ao redor do mundo. Por esse motivo, a marca BMW sempre se encontra entre as mais vendidas no mundo.
+                </p>
+                <p>Sua principal ativiade econômica atualmente é fabricação de automóveis, motocicletas, camionetas e utilitários. Dentre outras ativiades econômicas, temos: 
+                    <ul>
+                        <li>Comércio por atacado de peças e acessórios novos para veículos automotores;</li>
+                        <li>Comércio por atacado de motocicletas e motonetas;</li>
+                        <li>Serviços de manutenção e reparação mecânica de veículos automotores;</li>
+                        <li>Serviços de manutenção e reparação elétrica de veículos automotores;</li>
+                    </ul>
+                </p>
+                <!-- <span><i>- Haral Kruger, CEO of BMW</i></span> -->
             </div>
-            <div class="col-50">
-                <img id="logo" src="assets/images/bmw-logo.png" alt="bmw group" title="">
+            <div class="col-start-content">
+                <img src="assets/images/bmw-sede.jpg" alt="bmw group" title="">
+                <span><i>Sede BMW em Munique</i></span>
             </div>
         </div>
     </section>
 
-    <section id="inext" class="section">
-        <div class="inext-content">
-            <h2>Autonomus driving</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
-            <video autoplay loop muted>
-                <source src="https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/innovation/testdrive/copilot-01-stage-hd-d.mp4" type="video/mp4">
-            </video>
+    <section id="overview" class="section">
+        <div class="header">
+            <h2>Overview</h2>
+        </div>
+        <div class="overview-content">
+            <div class="overview-col-content">
+                <ul class="list-overview">
+                    <li><b>Fundação:</b> 7 março de 1916</li>
+                    <li><b>Fundador:</b> Karl Friedrich Rapp e Gustav Otto </li>
+                    <li><b>Sede:</b> Munique, Alemanha <img src="assets/images/germany-flag.png" class="flags" alt=""></li>
+                    <li><b>Presença Global:</b> +140 países</li>
+                    <li>
+                        <b>Maiores mercados:</b> 
+                        <img src="assets/images/germany-flag.png" class="flags" alt=""> Alemanha, 
+                        <img src="assets/images/usa-flag.png" class="flags" alt=""> Estados Unidos, 
+                        <img src="assets/images/brazil-flag.png" alt="" class="flags"> Brasil,
+                        <img src="assets/images/china-flag.png" alt="" class="flags"> China
+                    </li>
+                    <li><b>Colaboradores:</b> +130.000</li>
+                </ul>
+            </div>
+            <div class="overview-col-content">
+                <div class="slides">
+                    <div>
+                        <center>
+                            <img src="assets/images/ceo-bmw.jpg" alt="">
+                            <span class="subtitle">Haral Kruger, CEO da BMW.</span>
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <img src="assets/images/brands-bmw.png" alt="">
+                            <span class="subtitle">Marcas da BMW GROUP.</span>
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <img src="assets/images/bmw-m5.jpg" alt="">
+                            <span class="subtitle">BMW M5, o sedã mais vendido da marca.</span>
+                        </center>
+                    </div>
+                </div>
+                <!-- <video autoplay loop muted>
+                    <source src="https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/innovation/testdrive/copilot-01-stage-hd-d.mp4" type="video/mp4">
+                </video> -->
+            </div>
         </div>
     </section>
+    
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
