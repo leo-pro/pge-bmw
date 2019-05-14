@@ -156,6 +156,48 @@ body {
     padding: 20px 0px;
 }
 
+.global-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#global{
+    height: 1180px;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.global-content .table{
+    width: 85%;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.table thead th{
+    border: 1px solid;
+    padding: 20px;   
+}
+.table tbody td{
+    border: 1px solid;
+    padding: 20px;
+}
+.table tr{
+    text-align: center;
+}
+
+.table tbody tr:hover{
+    background: #d5d5d5;
+    color: #000;
+}
+
+.strategic-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 @media(max-width:960px){
     .container{
         padding-right:3rem;
