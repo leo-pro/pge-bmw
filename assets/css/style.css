@@ -102,6 +102,29 @@ a{
 }
 /* End Header */
 
+/* Panel */
+.panel{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+
+.panel-header img{
+    width: 100%;
+    height: 220px;
+}
+
+.panel .panel-title{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.panel .panel-content{
+    font-size: 0.9em;
+}
+/* End Panel */
+
 
 .section{
     width: 100%;
@@ -111,7 +134,7 @@ a{
 .header{
     font-size: 1.5em;
     text-align: center;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 /* Start Section */
@@ -223,7 +246,7 @@ a{
 
 /* Strategic Section */
 #strategic{
-    height: 900px;
+    height: 100%;
 }
 .strategic-content{
     width: 100%;
@@ -249,10 +272,81 @@ a{
 }
 /* End Strategic Section */
 
+/* Segments Section */
+#segments{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.segments-content .automotive{    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.segments-content .motorcycles{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('https://www.bmwgroup.com/content/dam/bmw-group-websites/bmwgroup_com/company/geschaeftsbereiche/Geschaeftsbereiche_BMW_Motorrad.jpg.grp-transform/xlarge/Geschaeftsbereiche_BMW_Motorrad.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.motorcycles .info-overlay{
+    background-color: #ffffff;
+    opacity: 0.7;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.numbers{
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.text-green{
+    font-size: 0.5em;
+    color: green;
+}
+
+.text-red{
+    font-size: 0.5em;
+    color: red;
+}
+/* End Segments Section */
+
+
+
+/* Reports Section */
+#reports{
+    height: 100%;
+    background-color: #ffffff;
+    color: #000000;
+}
+/* End Reports Section */
 
 @media(max-width:960px){
     .container{
         padding-right:3rem;
         padding-left:3rem;
+    }
+}
+
+@media(max-width: 600px){
+    .panel{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+    .segments-content{
+        width: 100%;
+        padding: 0px;
+        flex-direction: column;
     }
 }
