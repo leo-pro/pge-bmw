@@ -336,6 +336,7 @@ a{
     height: 100%;
     background-color: #ffffff;
     color: #000000;
+    padding-bottom: 50px;
 }
 
 .reports-content{
@@ -563,6 +564,7 @@ footer{
     /* Reports Section */
     #reports{
         font-size: 0.9em;
+        padding-bottom: 30px;
     }
     .reports-content{
         padding: 0px 20px;
@@ -573,4 +575,14 @@ footer{
         height: 200px !important;
     }
     /* End Reports Section */
+
+    /* Footer */
+    footer{
+        font-size: 0.9em;
+    }
+    .footer-link{
+        font-family: monospace;
+        font-size: 1.2em;
+    }
+    /* End Footer */
 }
