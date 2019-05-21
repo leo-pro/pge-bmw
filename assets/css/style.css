@@ -477,7 +477,34 @@ canvas .chart{
         border: 1px solid;
     }
     /* End Global Section */
+    /* Strategic Section */
+    .strategic-content{
+        padding: 0px 30px;
+    }
 
+    .frases{
+        margin-top: 0px;
+    }
+
+    .frases p{
+        font-size: 1.0em;
+        font-style: italic;
+        text-align: justify; 
+    }
+
+    .declarations{
+        font-size: 1.0em;
+    }
+
+    .declarations h2{
+        font-size: 1.1em;
+    }
+
+    .frases .symbol{
+        font-size: 1.4em;
+        color: #dbd004;
+    }
+    /* End Strategic Section */
     .panel{
         width: 90%;
         justify-content: center;
