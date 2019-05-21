@@ -346,8 +346,10 @@ a{
     align-items: center;
     padding: 20px 180px;
 }
-canvas .chart{
-    width: 100%;
+
+#chartModels{
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* End Reports Section */
@@ -545,10 +547,17 @@ canvas .chart{
     }
     /* End Segments Section */
 
+    /* Reports Section */
     #reports{
         font-size: 0.9em;
     }
     .reports-content{
         padding: 0px 20px;
     }
+
+    #chartModels{
+        width: 400px !important;
+        height: 200px !important;
+    }
+    /* End Reports Section */
 }
