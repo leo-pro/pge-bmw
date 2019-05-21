@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/chart.css">
+    <!-- <link rel="stylesheet" href="assets/css/chart.css"> -->
 
 </head>
 <body>
@@ -328,18 +328,20 @@
                     </div>
                 </div>
             </div>
-            <div class="header">
-                <h2>Motocicletas</h2>
-            </div>
-            <div class="motorcycles">
-                <div class="info-overlay">
-                    <h1>Motocicletas entregues em 2018:</h1>
-                    <h1 class="numbers">165,566 <span class="text-green">(+0,9%)</span></h1>
+            <div class="bg-grey">
+                <div class="header">
+                    <h2>Motocicletas</h2>
+                </div>
+                <div class="motorcycles">
+                    <div class="info-overlay">
+                        <h1>Motocicletas entregues em 2018:</h1>
+                        <h1 class="numbers">165,566 <span class="text-green">(+0,9%)</span></h1>
+                    </div>
                 </div>
             </div>
         </div>
         <div>
-            <center><a href="#reports"><i class="fas fa-arrow-circle-down skip bg-black"></i><a href="#reports"></a></center>
+            <center><a href="#reports"><i class="fas fa-arrow-circle-down skip"></i><a href="#reports"></a></center>
         </div>
     </section>
 
@@ -348,11 +350,145 @@
             <h2>Financial Reports</h2>
         </div>
         <div class="reports-content">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique accusantium ullam tempora placeat molestiae veniam eos maxime nobis, et aspernatur ratione nulla adipisci eius porro nisi in voluptates? Mollitia, temporibus!</p>
+            <h2>Automovéis</h2>
+            <canvas class="chart" id="chartAutomotive"></canvas>
+
+            <h2>Motocicletas</h2>
+            <canvas class="chart" id="chartMotorcycle"></canvas>
+
+            <h2>BMW/Mini mais vendidos no Brasil.</h2>
+            <canvas class="chart" id="chartModels"></canvas>
+            <span> Fonte: Relatório Anual da ANFAVEA, 2018.</span>
+
+            <h2>Modelos mais vendidos no Brasil das Marcas Premium.</h2>
+            <canvas class="chart" id="chartBrands"></canvas>
+            <span>Fonte: Relatório Anual da ANFAVEA, 2018.</span>
         </div>
     </section>
 
     <script src="assets/js/lib/chart.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        var chartAutomotive = document.getElementById('chartAutomotive').getContext('2d');
+        var myChart = new Chart(chartAutomotive, {
+            type: 'horizontalBar',
+            data: {
+                labels: ['2014', '2015', '2016', '2017', '2018'],
+                datasets: [{
+                    label: 'Automóveis entregues (milhões)',
+                    data: [2117965, 2247485, 2367603, 2463526, 2490664],
+                    backgroundColor: [
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var chartMotorcycle = document.getElementById('chartMotorcycle').getContext('2d');
+        var myChart = new Chart(chartMotorcycle, {
+            type: 'horizontalBar',
+            data: {
+                labels: ['2014', '2015', '2016', '2017', '2018'],
+                datasets: [{
+                    label: 'Motocicletas entregues',
+                    data: [123495, 136963, 145032, 164153, 165566],
+                    backgroundColor: [
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0,0.2)',
+                        'rgba(0,0,0, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0,1)',
+                        'rgba(0,0,0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var chartModels = document.getElementById('chartModels').getContext('2d');
+        var myPieChart = new Chart(chartModels, {
+            type: 'pie',
+            data: {
+                labels: ['BMW X1', 'BMW 320', 'Mini Cooper', 'BMW 220i', 'BMW 328','BMW 530','BMW 430i','BMW X3'],
+                datasets:[{
+                    data: [1,2,3,4,5,6,7,8],
+                    backgroundColor: [
+                        '#1F57E4',
+                        '#F27B26',
+                        '#DEE645',
+                        '#FB1E12',
+                        '#4AA538',
+                        '#898C99',
+                        'rgba(0,0,65,0.5)',
+                        'rgba(98,98,0,0.5)'
+                    ]
+                }]
+            },
+        });
+
+        var chartBrands = document.getElementById('chartBrands').getContext('2d');
+        var myChart = new Chart(chartBrands, {
+            type: 'bar',
+            data: {
+                labels: ['Audi', 'BMW/Mini', 'Jaguar/Land Hover', 'Mercedes-Benz'],
+                datasets: [{
+                    label: 'Veiculos vendidos por Marca',
+                    data: [4910, 5720, 5820, 5540],
+                    backgroundColor: [
+                        'rgba(0,0,0,0.6)',
+                        '#1F57E4',
+                        '#F27B26',
+                        '#898C99',
+                    ],
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    </script>
 </body>
 </html>

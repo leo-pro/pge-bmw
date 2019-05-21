@@ -286,9 +286,15 @@ a{
     justify-content: center;
 }
 
+.bg-grey{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+}
 .segments-content .motorcycles{
     width: 100%;
-    height: 550px;
+    height: 600px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -303,6 +309,7 @@ a{
     opacity: 0.7;
     width: 50%;
     margin: 0 auto;
+    color: #000000;
 }
 
 .numbers{
@@ -325,10 +332,24 @@ a{
 
 /* Reports Section */
 #reports{
+    width: 100%;
     height: 100%;
     background-color: #ffffff;
     color: #000000;
 }
+
+.reports-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 180px;
+}
+canvas .chart{
+    width: 100%;
+}
+
 /* End Reports Section */
 
 @media(max-width:960px){
@@ -344,9 +365,16 @@ a{
         justify-content: center;
         align-items: center;
     }
-    .segments-content{
+    .segments-content .automotive{
         width: 100%;
         padding: 0px;
         flex-direction: column;
+    }
+
+    #reports{
+        font-size: 0.9em;
+    }
+    .reports-content{
+        padding: 0px 40px;
     }
 }
