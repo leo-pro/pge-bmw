@@ -396,7 +396,6 @@ canvas .chart{
         padding: 1rem 2rem;
         text-decoration: none;
     }
-
     /* End Header */
 
     /* Start Section */
@@ -420,8 +419,64 @@ canvas .chart{
         height: 250px;
         opacity: 0.84;
     }
-
     /* End Start Section */
+
+    /* Overview Section */
+    #overview{
+        height: 100%;
+    }
+
+    .overview-content{
+        width: 100%;
+        padding: 0px 10px;
+        flex-direction: column;
+        font-size: 1.0em;
+    }
+
+    .overview-col-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .slides{
+        padding: 30px;
+        width: 100%;
+    }
+
+    .slides img{
+        width: 100%;
+        height: 90%;
+    }
+
+    .list-overview li{
+        list-style: none;
+        padding: 20px 0px;
+    }
+    /* End Overview Section */
+
+    /* Global Section */
+    .global-content{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    #global{
+        height: 100%;
+        background-color: #ffffff;
+        color: #000;
+    }
+
+    .global-content .table{
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid;
+    }
+    /* End Global Section */
 
     .panel{
         width: 90%;
