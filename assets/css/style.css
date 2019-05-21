@@ -510,16 +510,45 @@ canvas .chart{
         justify-content: center;
         align-items: center;
     }
+
+    /* Segments Section */
     .segments-content .automotive{
         width: 100%;
         padding: 0px;
         flex-direction: column;
     }
+    .segments-content .motorcycles{
+        height: 100%;
+    }
+    
+    .motorcycles .info-overlay{
+        background-color: #ffffff;
+        opacity: 0.7;
+        width: 80%;
+        margin: 0 auto;
+        color: #000000;
+    }
+    
+    .numbers{
+        font-size: 1.8em;
+        text-align: center;
+    }
+    
+    .text-green{
+        font-size: 0.5em;
+        color: green;
+    }
+    
+    .text-red{
+        font-size: 0.5em;
+        color: red;
+    }
+    /* End Segments Section */
 
     #reports{
         font-size: 0.9em;
     }
     .reports-content{
-        padding: 0px 40px;
+        padding: 0px 20px;
     }
 }
